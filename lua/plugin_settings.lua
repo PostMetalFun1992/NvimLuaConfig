@@ -5,7 +5,7 @@ cmd 'colorscheme jellybeans'
 
 -- lualine
 require('lualine').setup {
-    options = {theme = 'jellybeans'}
+  options = {theme = 'jellybeans'}
 }
 
 -- nvim-tree
