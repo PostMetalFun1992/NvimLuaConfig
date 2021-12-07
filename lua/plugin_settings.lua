@@ -1,11 +1,11 @@
 local cmd = vim.cmd
 local set = vim.opt
 
-cmd 'colorscheme gruvbox'
+cmd 'colorscheme jellybeans'
 
 -- lualine
 require('lualine').setup {
-    options = {theme = 'gruvbox'}
+    options = {theme = 'jellybeans'}
 }
 
 -- nvim-tree
