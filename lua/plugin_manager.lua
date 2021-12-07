@@ -12,11 +12,6 @@ return require('packer').startup(function()
         requires = {'kyazdani42/nvim-web-devicons'}
     }
 
-    use {
-        'akinsho/bufferline.nvim',
-        requires = {'kyazdani42/nvim-web-devicons'}
-    }
-
     use 'luochen1990/rainbow'
     use 'Yggdroot/indentLine'
 
@@ -26,7 +21,7 @@ return require('packer').startup(function()
     use 'dracula/vim'
 
     -- Code
-    use 'jiangmiao/auto-pairs'
+    use 'cohama/lexima.vim'
 
     use {
         'lewis6991/gitsigns.nvim',
