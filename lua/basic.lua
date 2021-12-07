@@ -25,6 +25,14 @@ cmd 'hi CursorLine term=bold cterm=bold guibg=Grey40'
 
 vim.g.python3_host_prog = '/usr/bin/python3'
 
+-- highlight on yanks
+cmd [[
+  augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+  augroup end
+]]
+
 -- per-project confs
 -- set.exrc = true
 -- set.secure = true
