@@ -21,11 +21,12 @@ return require('packer').startup(function()
     use 'dracula/vim'
 
     -- Code
-    use 'cohama/lexima.vim'
-
     use {
         'lewis6991/gitsigns.nvim',
         requires = {'nvim-lua/plenary.nvim'}
     }
+
+    use {'dense-analysis/ale', tag = 'v3.1.0'}
     use 'numToStr/Comment.nvim'
+    use 'cohama/lexima.vim'
 end)
