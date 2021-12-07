@@ -20,3 +20,6 @@ require('gitsigns').setup()
 
 --lexima
 vim.g.lexima_enable_basic_rules = 1
+
+-- Comment
+require('Comment').setup()
