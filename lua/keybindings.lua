@@ -10,3 +10,4 @@ map('n', 't.', ':tabnext<CR>', {noremap = true})
 map('n', 't,', ':tabprevious<CR>', {noremap = true})
 
 map('n', '<C-h>', ':set hlsearch! hlsearch?<CR>', {noremap = true})
+map('n', '<C-t>', ':NvimTreeToggle<CR>', {noremap = false})
