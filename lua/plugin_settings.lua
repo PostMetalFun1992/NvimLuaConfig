@@ -14,3 +14,9 @@ require('nvim-tree').setup()
 
 -- rainbow
 vim.g.rainbow_active = 1
+
+-- gitsigns
+require('gitsigns').setup()
+
+--bufferline
+require("bufferline").setup()

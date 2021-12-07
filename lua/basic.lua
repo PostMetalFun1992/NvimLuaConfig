@@ -2,11 +2,12 @@ local cmd = vim.cmd
 local set = vim.opt
 
 set.clipboard = 'unnamed'
+set.encoding = 'UTF-8'
 
 set.number = true
 set.termguicolors = true
-
 set.background = 'dark'
+set.signcolumn = 'yes'
 
 cmd [[
     filetype indent plugin on
