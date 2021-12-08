@@ -4,13 +4,18 @@ local set = vim.opt
 cmd 'colorscheme jellybeans'
 
 -- lualine
+-- TODO: Turn off in NvimTree buffer
 require('lualine').setup {
   options = {theme = 'jellybeans'}
 }
 
 -- nvim-tree
 vim.g.nvim_tree_indent_markers = 1
-require('nvim-tree').setup()
+vim.g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
+
+require('nvim-tree').setup {
+  auto_close = true
+}
 
 -- rainbow
 vim.g.rainbow_active = 1

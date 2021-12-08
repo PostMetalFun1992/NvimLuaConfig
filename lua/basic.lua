@@ -34,6 +34,4 @@ cmd [[
   augroup end
 ]]
 
--- per-project confs
--- set.exrc = true
--- set.secure = true
+-- TODO: activate per-project confs
