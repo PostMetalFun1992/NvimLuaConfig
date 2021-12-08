@@ -1,13 +1,8 @@
 local cmd = vim.cmd
 local set = vim.opt
 
-cmd 'colorscheme jellybeans'
-
--- lualine
--- TODO: Turn off in NvimTree buffer
-require('lualine').setup {
-  options = {theme = 'jellybeans'}
-}
+-- windline
+require('wlsample.bubble2')
 
 -- nvim-tree
 vim.g.nvim_tree_indent_markers = 1
@@ -33,3 +28,6 @@ require('Comment').setup()
 vim.g.ale_sign_error = '✖'
 vim.g.ale_sign_warning = '⚠'
 vim.g.ale_linters_explicit = 1
+
+-- execute this before statusline starts
+cmd 'colorscheme gruvbox'

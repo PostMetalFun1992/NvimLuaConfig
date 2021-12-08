@@ -7,11 +7,7 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons'}
   }
 
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
-
+  use 'windwp/windline.nvim'
   use 'luochen1990/rainbow'
   use 'Yggdroot/indentLine'
 
