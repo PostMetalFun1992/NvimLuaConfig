@@ -24,10 +24,5 @@ vim.g.lexima_enable_basic_rules = 1
 -- Comment
 require('Comment').setup()
 
--- ale
-vim.g.ale_sign_error = '✖'
-vim.g.ale_sign_warning = '⚠'
-vim.g.ale_linters_explicit = 1
-
 -- execute this before statusline starts
 cmd 'colorscheme gruvbox'

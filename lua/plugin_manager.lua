@@ -22,7 +22,6 @@ return require('packer').startup(function()
     requires = {'nvim-lua/plenary.nvim'}
   }
 
-  use {'dense-analysis/ale', tag = 'v3.1.0'}
   use 'numToStr/Comment.nvim'
   use 'cohama/lexima.vim'
 end)
