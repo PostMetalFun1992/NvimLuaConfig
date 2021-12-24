@@ -24,5 +24,11 @@ vim.g.lexima_enable_basic_rules = 1
 -- Comment
 require('Comment').setup()
 
+-- exrc.vim
+cmd [[
+  autocmd BufWritePost .exrc.lua nested silent ExrcTrust
+  let g:exrc#names = ['.exrc.lua']
+]]
+
 -- execute this before statusline starts
 cmd 'colorscheme gruvbox'

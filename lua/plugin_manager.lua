@@ -24,4 +24,6 @@ return require('packer').startup(function()
 
   use 'numToStr/Comment.nvim'
   use 'cohama/lexima.vim'
+
+  use 'ii14/exrc.vim'
 end)

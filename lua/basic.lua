@@ -34,4 +34,3 @@ cmd [[
   augroup end
 ]]
 
--- TODO: activate per-project confs
