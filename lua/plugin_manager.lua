@@ -31,10 +31,11 @@ return require('packer').startup(function()
   use 'numToStr/Comment.nvim'
   use 'cohama/lexima.vim'
 
+  use 'dense-analysis/ale'
+
   -----------------------------------------------------------
   -- Other
   -----------------------------------------------------------
   use 'ii14/exrc.vim'
-
 end)
 
