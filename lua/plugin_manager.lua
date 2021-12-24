@@ -23,15 +23,21 @@ return require('packer').startup(function()
   -----------------------------------------------------------
   -- Code
   -----------------------------------------------------------
+  use 'dense-analysis/ale'
+  use 'neovim/nvim-lspconfig'
+
+  -- Autocomplete
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
+
   use {
     'lewis6991/gitsigns.nvim',
     requires = {'nvim-lua/plenary.nvim'}
   }
 
   use 'numToStr/Comment.nvim'
+  -- Auto-close parentheses
   use 'cohama/lexima.vim'
-
-  use 'dense-analysis/ale'
 
   -----------------------------------------------------------
   -- Other
