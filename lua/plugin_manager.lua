@@ -1,7 +1,9 @@
 return require('packer').startup(function()
-  use 'wbthomason/packer.nvim'
+  use 'wbthomason/packer.nvim' -- keep it !
 
-  -- UI tweaks
+  -----------------------------------------------------------
+  -- UI
+  -----------------------------------------------------------
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {'kyazdani42/nvim-web-devicons'}
@@ -11,12 +13,16 @@ return require('packer').startup(function()
   use 'luochen1990/rainbow'
   use 'Yggdroot/indentLine'
 
+  -----------------------------------------------------------
   -- Colorschemes
+  -----------------------------------------------------------
   use 'nanotech/jellybeans.vim'
   use 'morhetz/gruvbox'
   use 'dracula/vim'
 
+  -----------------------------------------------------------
   -- Code
+  -----------------------------------------------------------
   use {
     'lewis6991/gitsigns.nvim',
     requires = {'nvim-lua/plenary.nvim'}
@@ -25,5 +31,10 @@ return require('packer').startup(function()
   use 'numToStr/Comment.nvim'
   use 'cohama/lexima.vim'
 
+  -----------------------------------------------------------
+  -- Other
+  -----------------------------------------------------------
   use 'ii14/exrc.vim'
+
 end)
+

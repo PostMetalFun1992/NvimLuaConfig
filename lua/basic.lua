@@ -1,30 +1,44 @@
 local cmd = vim.cmd
 local set = vim.opt
 
-set.clipboard = 'unnamed'
+-----------------------------------------------------------
+-- Basics
+-----------------------------------------------------------
+set.clipboard = 'unnamedplus'
 set.encoding = 'UTF-8'
+set.swapfile = false
 
-set.number = true
-set.termguicolors = true
-set.background = 'dark'
-set.signcolumn = 'yes'
-set.fillchars:append { eob = " " } -- remove "~" signs
+set.splitright = true
+set.splitbelow = true
 
-cmd 'filetype indent plugin on'
-cmd 'syntax enable'
+vim.g.python3_host_prog = '/usr/bin/python3'
+
+----------------------------------------------------------
+-- Tabs, indent
+----------------------------------------------------------
+cmd [[filetype indent plugin on]]
 
 set.expandtab = true
 set.shiftwidth = 2
 set.tabstop = 2
 set.softtabstop = 2
 
-set.splitright = true
-set.splitbelow = true
+-----------------------------------------------------------
+-- UI
+-----------------------------------------------------------
+cmd [[syntax enable]]
+
+set.number = true
+set.termguicolors = true
+set.background = 'dark'
+
+set.signcolumn = 'yes'
 
 set.cursorline = true
-cmd 'hi CursorLine term=bold cterm=bold guibg=Grey40'
+cmd [[hi CursorLine term=bold cterm=bold guibg=Grey40]]
 
-vim.g.python3_host_prog = '/usr/bin/python3'
+ -- remove "~" signs
+set.fillchars:append { eob = " " }
 
 -- highlight on yanks
 cmd [[
