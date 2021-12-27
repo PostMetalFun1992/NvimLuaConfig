@@ -30,10 +30,9 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/nvim-cmp'
 
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = {'nvim-lua/plenary.nvim'}
-  }
+  -- Git
+  use {'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim'}
+  use 'tpope/vim-fugitive'
 
   use 'numToStr/Comment.nvim'
   -- Auto-close parentheses
