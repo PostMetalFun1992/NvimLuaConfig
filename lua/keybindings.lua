@@ -56,4 +56,6 @@ map('n', '<leader>gb', '<cmd>GitBlameToggle<CR>', opts)
 -----------------------------------------------------------
 -- Other
 -----------------------------------------------------------
+map('n', '<leader>b.', '<cmd>bnext<CR>', opts)
+map('n', '<leader>b,', '<cmd>bprevious<CR>', opts)
 map('n', '<C-h>', ':set hlsearch! hlsearch?<CR>', opts)
