@@ -20,6 +20,8 @@ return require('packer').startup(function()
   -----------------------------------------------------------
   use { 'neovim/nvim-lspconfig' }
   use { 'jose-elias-alvarez/null-ls.nvim' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/nvim-cmp' }
 
   -----------------------------------------------------------
   -- Code
