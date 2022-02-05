@@ -41,6 +41,14 @@ map("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()
 map("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
 
 -----------------------------------------------------------
+-- nvim-lspconfig
+-----------------------------------------------------------
+map('n', '<leader>gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+map('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+map('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+map('n', '<leader>h', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+
+-----------------------------------------------------------
 -- git-blame
 -----------------------------------------------------------
 map('n', '<leader>gb', '<cmd>GitBlameToggle<CR>', opts)
