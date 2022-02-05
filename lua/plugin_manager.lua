@@ -25,6 +25,7 @@ return require('packer').startup(function()
   use { 'f-person/git-blame.nvim' }
 
   use { 'numToStr/Comment.nvim' }
+  use { 'windwp/nvim-autopairs' }
   use { 'lukas-reineke/indent-blankline.nvim' }
   use { 'ii14/exrc.vim' }
 
