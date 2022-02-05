@@ -25,20 +25,25 @@ map('v', '<Right>', '<nop>', opts)
 -----------------------------------------------------------
 -- NvimTree
 -----------------------------------------------------------
-map('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
+map('n', '<leader>t', '<cmd>NvimTreeToggle<CR>', opts)
 
 -----------------------------------------------------------
 -- Telescope
 -----------------------------------------------------------
-map('n', '<leader>f', '<cmd>Telescope find_files<cr>', opts)
-map('n', '<leader>g', '<cmd>Telescope live_grep<cr>', opts)
-map('n', '<leader>b', '<cmd>Telescope buffers<cr>', opts)
+map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', opts)
+map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', opts)
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', opts)
 
 -----------------------------------------------------------
 -- Comment
 -----------------------------------------------------------
 map("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 map("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
+
+-----------------------------------------------------------
+-- git-blame
+-----------------------------------------------------------
+map('n', '<leader>gb', '<cmd>GitBlameToggle<CR>', opts)
 
 -----------------------------------------------------------
 -- Other

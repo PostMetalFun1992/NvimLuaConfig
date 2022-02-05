@@ -22,7 +22,7 @@ return require('packer').startup(function()
   use { 'p00f/nvim-ts-rainbow' }
 
   use { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' }
-  use { 'tpope/vim-fugitive' }
+  use { 'f-person/git-blame.nvim' }
 
   use { 'numToStr/Comment.nvim' }
   use { 'lukas-reineke/indent-blankline.nvim' }
