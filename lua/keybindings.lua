@@ -1,28 +1,46 @@
 local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+-----------------------------------------------------------
+-- Leader
+-----------------------------------------------------------
+map("", "<Space>", "<Nop>", opts)
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -----------------------------------------------------------
 -- Arrows
 -----------------------------------------------------------
-map('n', '<Up>', '<nop>', {noremap = true})
-map('n', '<Down>', '<nop>', {noremap = true})
-map('n', '<Left>', '<nop>', {noremap = true})
-map('n', '<Right>', '<nop>', {noremap = true})
+map('n', '<Up>', '<nop>', opts)
+map('n', '<Down>', '<nop>', opts)
+map('n', '<Left>', '<nop>', opts)
+map('n', '<Right>', '<nop>', opts)
 
-map('v', '<Up>', '<nop>', {noremap = true})
-map('v', '<Down>', '<nop>', {noremap = true})
-map('v', '<Left>', '<nop>', {noremap = true})
-map('v', '<Right>', '<nop>', {noremap = true})
-
------------------------------------------------------------
--- Tabs
------------------------------------------------------------
-map('n', 'tt', ':tabnew<CR>', {noremap = true})
-map('n', 't.', ':tabnext<CR>', {noremap = true})
-map('n', 't,', ':tabprevious<CR>', {noremap = true})
+map('v', '<Up>', '<nop>', opts)
+map('v', '<Down>', '<nop>', opts)
+map('v', '<Left>', '<nop>', opts)
+map('v', '<Right>', '<nop>', opts)
 
 -----------------------------------------------------------
--- HLsearch
+-- NvimTree
 -----------------------------------------------------------
-map('n', '<C-h>', ':set hlsearch! hlsearch?<CR>', {noremap = true})
-map('n', '<C-t>', ':NvimTreeToggle<CR>', {noremap = false})
+map('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
 
+-----------------------------------------------------------
+-- Telescope
+-----------------------------------------------------------
+map('n', '<leader>f', '<cmd>Telescope find_files<cr>', opts)
+map('n', '<leader>g', '<cmd>Telescope live_grep<cr>', opts)
+map('n', '<leader>b', '<cmd>Telescope buffers<cr>', opts)
+
+-----------------------------------------------------------
+-- Comment
+-----------------------------------------------------------
+map("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
+map("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
+
+-----------------------------------------------------------
+-- Other
+-----------------------------------------------------------
+map('n', '<C-h>', ':set hlsearch! hlsearch?<CR>', opts)

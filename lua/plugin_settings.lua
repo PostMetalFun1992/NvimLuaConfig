@@ -2,9 +2,9 @@ local cmd = vim.cmd
 local set = vim.opt
 
 -----------------------------------------------------------
--- Windline
+-- Colorscheme
 -----------------------------------------------------------
-require('wlsample.bubble2')
+cmd [[colorscheme dracula]]
 
 -----------------------------------------------------------
 -- nvim-tree
@@ -13,28 +13,41 @@ vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
 
 require('nvim-tree').setup {
-  auto_close = true
+  auto_close = true,
+    update_focused_file = {
+    enable = true,
+  },
 }
 
 -----------------------------------------------------------
--- rainbow
+-- treesitter
 -----------------------------------------------------------
-vim.g.rainbow_active = 1
+require("nvim-treesitter.configs").setup {
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
+  }
+}
+
+-----------------------------------------------------------
+-- lualine
+-----------------------------------------------------------
+require('lualine').setup {
+  options = {
+    disabled_filetypes = {"NvimTree"},
+  }
+}
+
+-----------------------------------------------------------
+-- indent-blankline
+-----------------------------------------------------------
+-- require('indent-blankline.nvim').setup()
 
 -----------------------------------------------------------
 -- gitsigns
 -----------------------------------------------------------
 require('gitsigns').setup()
-
------------------------------------------------------------
--- lexima
------------------------------------------------------------
-vim.g.lexima_enable_basic_rules = 1
-
------------------------------------------------------------
--- Comment
------------------------------------------------------------
-require('Comment').setup()
 
 -----------------------------------------------------------
 -- exrc.vim
@@ -43,19 +56,3 @@ cmd [[
   autocmd BufWritePost .exrc.lua nested silent ExrcTrust
   let g:exrc#names = ['.exrc.lua']
 ]]
-
------------------------------------------------------------
--- ALE
------------------------------------------------------------
-vim.g.ale_sign_error = '✖'
-vim.g.ale_sign_warning = '⚠'
-
-vim.g.ale_linters_explicit = 1
-vim.g.ale_fix_on_save = 1
-
------------------------------------------------------------
--- Colorscheme
------------------------------------------------------------
--- execute this before statusline starts
-cmd 'colorscheme gruvbox'
-
