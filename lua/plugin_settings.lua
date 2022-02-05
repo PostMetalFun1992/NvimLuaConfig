@@ -42,7 +42,20 @@ require('lualine').setup {
 -----------------------------------------------------------
 -- indent-blankline
 -----------------------------------------------------------
--- require('indent-blankline.nvim').setup()
+vim.g.indentLine_enabled = 1
+vim.g.indent_blankline_char = "▏"
+vim.g.indent_blankline_buftype_exclude = {
+  "nofile",
+  "terminal",
+  "lsp-installer",
+  "lspinfo",
+}
+vim.g.indent_blankline_filetype_exclude = {
+  "help",
+  "dashboard",
+  "packer",
+  "NvimTree",
+}
 
 -----------------------------------------------------------
 -- gitsigns
