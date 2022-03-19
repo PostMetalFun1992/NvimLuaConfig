@@ -30,9 +30,9 @@ map('n', '<leader>t', '<cmd>NvimTreeToggle<CR>', opts)
 -----------------------------------------------------------
 -- Telescope
 -----------------------------------------------------------
-map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', opts)
-map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', opts)
-map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', opts)
+map('n', '<leader>f', '<cmd>Telescope find_files<cr>', opts)
+map('n', '<leader>g', '<cmd>Telescope live_grep<cr>', opts)
+map('n', '<leader>b', '<cmd>Telescope buffers<cr>', opts)
 
 -----------------------------------------------------------
 -- Comment
@@ -43,9 +43,9 @@ map("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_op(v
 -----------------------------------------------------------
 -- nvim-lspconfig
 -----------------------------------------------------------
-map('n', '<leader>gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-map('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-map('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 map('n', '<leader>h', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 
 -----------------------------------------------------------
@@ -56,6 +56,11 @@ map('n', '<leader>gb', '<cmd>GitBlameToggle<CR>', opts)
 -----------------------------------------------------------
 -- Other
 -----------------------------------------------------------
-map('n', '<leader>b.', '<cmd>bnext<CR>', opts)
-map('n', '<leader>b,', '<cmd>bprevious<CR>', opts)
+map('n', '<leader>.', '<cmd>bnext<CR>', opts)
+map('n', '<leader>,', '<cmd>bprevious<CR>', opts)
+
+map('n', 'tt', '<cmd>tabnew<CR>', opts)
+map('n', 't.', '<cmd>tabnext<CR>', opts)
+map('n', 't,', '<cmd>tabprevious<CR>', opts)
+
 map('n', '<C-h>', ':set hlsearch! hlsearch?<CR>', opts)
