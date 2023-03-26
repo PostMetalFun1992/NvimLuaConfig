@@ -7,6 +7,7 @@ return require('packer').startup(function()
   use { 'nanotech/jellybeans.vim' }
   use { 'morhetz/gruvbox' }
   use { 'dracula/vim' }
+  use { 'sainnhe/sonokai' }
 
   -----------------------------------------------------------
   -- UI

@@ -37,8 +37,18 @@ map('n', '<leader>b', '<cmd>Telescope buffers<cr>', opts)
 -----------------------------------------------------------
 -- Comment
 -----------------------------------------------------------
-map("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
-map("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
+require('Comment').setup {
+  toggler = {
+    line = '<leader>/',
+  },
+  opleader = {
+    line = '<leader>/',
+  },
+  mappings = {
+    basic = true,
+    extra = false,
+  },
+}
 
 -----------------------------------------------------------
 -- nvim-lspconfig

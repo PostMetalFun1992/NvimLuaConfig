@@ -4,18 +4,24 @@ local set = vim.opt
 -----------------------------------------------------------
 -- Colorscheme
 -----------------------------------------------------------
-cmd [[colorscheme gruvbox]]
+cmd [[colorscheme dracula]]
 
 -----------------------------------------------------------
 -- nvim-tree
 -----------------------------------------------------------
-vim.g.nvim_tree_indent_markers = 1
-vim.g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
-
 require('nvim-tree').setup {
-  auto_close = true,
-    update_focused_file = {
+  update_focused_file = {
     enable = true,
+  },
+  renderer = {
+    indent_markers = {
+      enable = true,
+    },
+    root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" },
+  },
+  view = {
+    width = 45,
+    -- adaptive_size = true,
   },
 }
 
