@@ -66,11 +66,9 @@ map('n', '<leader>gb', '<cmd>GitBlameToggle<CR>', opts)
 -----------------------------------------------------------
 -- Other
 -----------------------------------------------------------
-map('n', '<leader>.', '<cmd>bnext<CR>', opts)
-map('n', '<leader>,', '<cmd>bprevious<CR>', opts)
-
-map('n', 'tt', '<cmd>tabnew<CR>', opts)
-map('n', 't.', '<cmd>tabnext<CR>', opts)
-map('n', 't,', '<cmd>tabprevious<CR>', opts)
+map('n', 'tt', '<Cmd>tabnew<CR>', opts)
+map('n', 'tq', '<Cmd>BufferClose<CR>', opts)
+map('n', 't.', '<Cmd>BufferNext<CR>', opts)
+map('n', 't,', '<Cmd>BufferPrevious<CR>', opts)
 
 map('n', '<C-h>', ':set hlsearch! hlsearch?<CR>', opts)
